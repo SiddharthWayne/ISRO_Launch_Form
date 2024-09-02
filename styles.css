@@ -17,7 +17,7 @@ body {
     position: relative;
     width: 100%;
     height: 100vh;
-    background-image: url("I:/5th sem/App Dev/ISRO_exp2/purple-oil-paint-texture.jpg");
+    background-image: url("purple-oil-paint-texture.jpg");
     background-size: cover;
     background-position: center;
     display: flex;
