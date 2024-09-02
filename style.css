@@ -1,0 +1,109 @@
+/* General Styles */
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #000000;
+    color: #ffffff;
+    margin: 0;
+    padding: 0;
+}
+
+/* Registration Page */
+.registration-page {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-image: url("I:/5th sem/App Dev/ISRO_exp2/galaxy-night-panorama.jpg");
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+/* Adjust container styling to blend with background */
+.registration-container {
+    background: rgba(0, 0, 0, 0.5); /* Slightly darker to blend but not too dark */
+    padding: 30px;
+    border-radius: 8px;
+    width: 100%;
+    max-width: 600px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    animation: fadeIn 1s ease-in-out;
+}
+
+.registration-container h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    transition: transform 0.3s;
+}
+
+.registration-container label {
+    display: block;
+    font-size: 16px;
+    margin: 10px 0 5px;
+}
+
+.registration-container input[type="text"],
+.registration-container input[type="email"],
+.registration-container select,
+.registration-container input[type="file"] {
+    width: calc(100% - 22px);
+    padding: 10px;
+    font-size: 16px;
+    border: none;
+    border-radius: 4px;
+    margin-bottom: 15px;
+    transition: transform 0.3s;
+}
+
+.registration-container input[type="file"] {
+    padding: 8px;
+}
+
+.registration-container button {
+    padding: 10px 20px;
+    background-color: #00bcd4;
+    color: #ffffff;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+/* Hover effects for buttons and form fields */
+.registration-container button:hover {
+    background-color: #008c9e;
+    transform: scale(1.05);
+}
+
+.registration-container input:focus,
+.registration-container select:focus {
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 188, 212, 0.5);
+}
+
+/* Animation for form elements */
+@keyframes jiggle {
+    0% { transform: translateX(0); }
+    25% { transform: translateX(-5px); }
+    50% { transform: translateX(5px); }
+    75% { transform: translateX(-5px); }
+    100% { transform: translateX(0); }
+}
+
+.registration-container input:focus,
+.registration-container select:focus,
+.registration-container button:hover {
+    animation: jiggle 0.5s ease;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}

@@ -1,0 +1,243 @@
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    color: #ffffff;
+    background-color: #000000;
+}
+
+/* Hero Section */
+.hero-section {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background-image: url('images/background.jpg');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #ffffff;
+    overflow: hidden;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 1;
+}
+
+/* Navbar */
+.navbar {
+    position: absolute;
+    top: 20px;
+    width: 90%;
+    max-width: 1200px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 2;
+}
+
+.logo img {
+    width: 100px; /* Increased the logo size */
+    height: 100px; /* Increased the logo size */
+}
+
+.nav-links a {
+    margin-left: 20px;
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: #00bcd4;
+}
+
+/* Hero Content */
+.hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 800px;
+    padding: 20px;
+    animation: fadeIn 2s ease-in-out;
+    text-align: center;
+}
+
+.hero-content h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.hero-content p {
+    font-size: 20px;
+    margin-bottom: 30px;
+    line-height: 1.5;
+    text-align: justify;
+}
+
+.next-button {
+    display: inline-block;
+    padding: 15px 30px;
+    background-color: #00bcd4;
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 18px;
+    border-radius: 30px;
+    transition: transform 0.3s, background-color 0.3s;
+    position: relative;
+    overflow: hidden;
+}
+
+.next-button:hover {
+    background-color: #008c9e;
+    transform: scale(1.05);
+}
+
+/* Sections */
+.section {
+    padding: 60px 20px;
+    background-color: #121212;
+    text-align: justify;
+}
+
+.dark-section {
+    background-color: #1e1e1e;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    animation: fadeInUp 1s ease-in-out;
+}
+
+.section h2 {
+    font-size: 36px;
+    margin-bottom: 30px;
+    position: relative;
+    display: inline-block;
+    padding-bottom: 10px;
+    text-align: center;
+}
+
+.section p,
+.section ul {
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    color: #cccccc;
+}
+
+.section ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.section ul li {
+    margin-bottom: 10px;
+    position: relative;
+    padding-left: 20px;
+}
+
+.section ul li::before {
+    content: '•';
+    color: #00bcd4;
+    font-size: 24px;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.email-link {
+    color: #ffffff; /* Set the email color to white */
+}
+
+footer {
+    background-color: #000000;
+    padding: 20px 0;
+    text-align: center;
+    color: #cccccc;
+    font-size: 14px;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .hero-content h1 {
+        font-size: 32px;
+    }
+
+    .hero-content p {
+        font-size: 16px;
+    }
+
+    .next-button {
+        padding: 10px 20px;
+        font-size: 16px;
+    }
+
+    .section h2 {
+        font-size: 28px;
+    }
+
+
+    .section p,
+    .section ul {
+        font-size: 16px;
+        line-height: 1.6;
+    }
+    
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .nav-links {
+        margin-top: 10px;
+    }
+    
+    .nav-links a {
+        margin-left: 0;
+        margin-right: 20px;
+    }
+    
+    .logo img {
+        width: 100px; /* Adjusted logo size */
+        height: 100px;
+    }
+}
